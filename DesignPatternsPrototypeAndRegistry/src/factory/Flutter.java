@@ -4,6 +4,7 @@ import factory.enums.Platform;
 import factory.uifactory.AndroidUIFactory;
 import factory.uifactory.IOSUIFactory;
 import factory.uifactory.UIFactory;
+import factory.uifactory.UIFactoryfactory;
 
 public class Flutter {
     public void setTheme() {
@@ -15,12 +16,13 @@ public class Flutter {
     }
 
     public UIFactory createFactory(Platform platform) {
-        if(platform == Platform.ANDROID) {
-            return new AndroidUIFactory();
-        }
-        else if(platform == Platform.IOS) {
-            return new IOSUIFactory();
-        }
-        return null;
+        return UIFactoryfactory.getUiFactoryForPlatform(platform);
+//        if(platform == Platform.ANDROID) {
+//            return new AndroidUIFactory();
+//        }
+//        else if(platform == Platform.IOS) {
+//            return new IOSUIFactory();
+//        }
+//        return null;
     }
 }

@@ -7,7 +7,7 @@ import factory.uifactory.UIFactory;
 public class Client {
     public static void main(String[] args) {
         Flutter flutter = new Flutter();
-        UIFactory uiFactory = flutter.createFactory(Platform.ANDROID);
+        UIFactory uiFactory = flutter.createFactory(Platform.IOS);
 
         Button b =  uiFactory.createButton();
         b.printButton();
