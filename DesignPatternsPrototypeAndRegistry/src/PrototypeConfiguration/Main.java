@@ -11,7 +11,7 @@ public class Main {
         Configuration clonedBasicConf = registry.clone(ConfigurationType.BASIC);
 
         System.out.println("Basic Theme Color: "+ basicConfiguration.getThemeColor());
-        System.out.println("Cloned Theme Color: "+ clonedBasicConf.getThemeColor());
+        System.out    .println("Cloned Theme Color: "+ clonedBasicConf.getThemeColor());
 
         System.out.println(basicConfiguration.getDarkMode().equals(clonedBasicConf.getDarkMode()));
 
